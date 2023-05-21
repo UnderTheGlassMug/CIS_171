@@ -4,7 +4,7 @@ Railroad Name:    Ironton and Tylerville
 Destination:      Flint Edison #4
 
 Number of ore cars:............          87
-Total weight of coal...........     6481.50
+Total weight of coal...........     6481.50 short tons
 Current Cost per short ton..... $     65.47
 Total Value of Shipment........ $ 424343.80
 Current Surcharge..............        0.31%
