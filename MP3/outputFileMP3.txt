@@ -1,0 +1,18 @@
+Cellphone charges - MP3 by Ava Gullitti
+
+Time  Duration       Type of call   Minutes used so far    Cost
+
+1100      30              L               30              $0.00
+2230      20              A          Night Calls Are Free
+1200     100              A              130              $0.00
+0559      40              L          Night Calls Are Free
+1530      60              L              190              $0.00
+0800      15              A              205              $4.35
+1800      20              L          Night Calls Are Free
+0600      10              A          Night Calls Are Free
+1730      10              L              215              $6.90
+1759       5              A              220              $1.45
+0001       3              A          Night Calls Are Free
+0001       3              A          Night Calls Are Free
+
+Total Monthly Bill : $12.70
