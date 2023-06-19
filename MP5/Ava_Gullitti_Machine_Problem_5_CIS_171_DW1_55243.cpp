@@ -1,7 +1,7 @@
 //Banking Information
 //Ava Gullitti
 //6-30-2023
-/* This C++ program is designed to solve WCC machine problem 5. This problem requires the program to mange customer's banking information and then display the required information for each customer. The program will do it using five function. The first function, readAccountNo, will promt the user to enter an account number and then return. This function only accepts even positive account numbers less than 10,000. The secound function readBalanceAmount prompts the user to enter the opening balance amount and returns it. If the users enters an amount less than 1 or greater than $200,00 then the function should keep asking the user, by using a for loop, to enter an amount until user enters a value between 1 to $200,000. The fourth function, calculateDeposit, will accept the account balence as an argument and prompt the user to enter the ammount needed to deposit. The function will then calculate and return the new cumulative amount balance. The fourth function, addReturnBonus, accepts the opening balance as a argument, and calculate and return the new blance after the bounus percentage. This bounus changes based on the account amount. If the amount is between 1 and 100 the percentage is 2%. If the amount is between 101 and 500 the percentage is 3%. If the amount is between 501 and 1000 the percentage is 4%. If the amount is over 1000 the percentage is 5%. The fifth function, printAllInfo, accepts eight parameters (four account numbers and four account balances) and displays account balances for all the accounts. After these function are created the main function will run*/
+/* This C++ program is designed to solve WCC machine problem 5. This problem requires the program to mange customer's banking information and then display the required information for each customer. The program will do it using five function. The first function, readAccountNo, will promt the user to enter an account number and then return. This function only accepts even positive account numbers less than 10,000. The secound function readBalanceAmount prompts the user to enter the opening balance amount and returns it. If the users enters an amount less than 1 or greater than $200,00 then the function should keep asking the user, by using a for loop, to enter an amount until user enters a value between 1 to $200,000. The fourth function, calculateDeposit, will accept the account balence as an argument and prompt the user to enter the ammount needed to deposit. The function will then calculate and return the new cumulative amount balance. The fourth function, addReturnBonus, accepts the opening balance as a argument, and calculate and return the new blance after the bounus percentage. This bounus changes based on the account amount. If the amount is between 1 and 100 the percentage is 2%. If the amount is between 101 and 500 the percentage is 3%. If the amount is between 501 and 1000 the percentage is 4%. If the amount is over 1000 the percentage is 5%. The fifth function, printAllInfo, accepts eight parameters (four account numbers and four account balances) and displays account balances for all the accounts. After these function are created the main function will run. In the main function first it will display the developer details using a for loop. Then another for loop will run asking the user for 4 customers account numbers and opening balences. After these account details have be entered the program will calculate and add the return bonus to the account balance for each account. Then a main menu will appear while the user has not choosen option C. Option A will allow the user to deposit a specfic amount of money to the account. Option B will allow the user to view the account information of the four accounts and option c will allow the user to exit the program and view the final account information*/
 
 // inculding necessary libraries
 #include <iostream>
@@ -12,7 +12,7 @@ using namespace std;
 
 //defining variables
 int currentAccountNum;
-int index;
+int accountIndex;
 char option;
 
 // creating arrays for account numbers and balances
@@ -28,16 +28,18 @@ void printAllInfo(int accountNo0, int accountNo1, int accountNo2, int accountNo3
 
 //Running the main function
 int main() {
-    //Displays the developer’s details
-    cout << "*****************************************************************************" << endl << "*****************************************************************************" << endl;
-    cout << "Name: Ava Gullitti Section: DW1                      Due Date: June, 30, 2023" << endl;
-    cout << "*****************************************************************************" << endl << "*****************************************************************************" << endl;
+    //Displays the developer’s details using a for loop
+    for (int i = 0; i < 1 ; i++) {
+    	cout << "*****************************************************************************" << endl << "*****************************************************************************" << endl;
+    	cout << "Name: Ava Gullitti Section: DW1                      Due Date: June, 30, 2023" << endl;
+    	cout << "*****************************************************************************" << endl << "*****************************************************************************" << endl;
+    }
     
     //adding 4 customers account number and balance and claculating the bonus
     cout << "Enter data for 4 customers" << endl;
-    for (int i; i < 4; i++) {
+    for (int i = 0; i < 4; i++) {
         cout << "For customer " << i+1 << endl;
-        // calling both the readAccountNo() and readBalanceAmount() functionc
+        // calling both the readAccountNo() and readBalanceAmount() functions
         accountNo[i] = readAccountNo();
         balance[i] = readBalanceAmount();
         //adding the bonus to the balence
@@ -59,10 +61,10 @@ int main() {
                 cin >> currentAccountNum;
                 for (int i = 0; i < 4; i++) { //finding the index of the account number given
                     if (accountNo[i] == currentAccountNum) {
-                        index = i;
+                        accountIndex = i;
                     }
                 }
-                balance[index] = calculateDeposit(balance[index]); //finding the balance of the account with that index in the balance list
+                balance[accountIndex] = calculateDeposit(balance[accountIndex]); //finding the balance of the account with that index in the balance list
                 break;
             case 'B'://view account option
                 cout << endl;
@@ -113,7 +115,7 @@ double readBalanceAmount() {
     return balance;
 }
 
-//this function calculates the new balence after a deposit
+//this function calculates the new balence after a deposit it takes in the balence variable as parameter
 double calculateDeposit(double balance) {
     double deposit;
     double newBalance;
@@ -126,7 +128,7 @@ double calculateDeposit(double balance) {
     return newBalance;
 }
 
-//this function adds the bonus to the account balance
+//this function adds the bonus to the account balance it takes in the balance variable as a parameter
 double addReturnBonus(double balance) {
     double bonus;
     double percentage;
@@ -154,9 +156,9 @@ double addReturnBonus(double balance) {
 void printAllInfo(int accountNo0, int accountNo1, int accountNo2, int accountNo3, double balance0, double balance1, double balance2, double balance3) {
     cout << "================================= Balance Accounts ==========================" << endl;
     cout << "=============================================================================" << endl;
-    cout << "Balance amount for Customer account number " << accountNo0 << setw(14) << fixed << setprecision(2) << balance0 << endl;
-    cout << "Balance amount for Customer account number " << accountNo1 << setw(14) << fixed << setprecision(2) << balance1 << endl;
-    cout << "Balance amount for Customer account number " << accountNo2 << setw(14) << fixed << setprecision(2) << balance2 << endl;
-    cout << "Balance amount for Customer account number " << accountNo3 << setw(14) << fixed << setprecision(2) << balance3 << endl;
+    cout << "Balance amount for Customer account number " << setw(4) << accountNo0 << setw(14) << fixed << setprecision(2) << balance0 << endl;
+    cout << "Balance amount for Customer account number " << setw(4) << accountNo1 << setw(14) << fixed << setprecision(2) << balance1 << endl;
+    cout << "Balance amount for Customer account number " << setw(4) << accountNo2 << setw(14) << fixed << setprecision(2) << balance2 << endl;
+    cout << "Balance amount for Customer account number " << setw(4) << accountNo3 << setw(14) << fixed << setprecision(2) << balance3 << endl;
     cout << "=============================================================================" << endl;
 }

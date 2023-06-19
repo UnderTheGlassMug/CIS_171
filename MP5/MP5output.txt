@@ -1,0 +1,112 @@
+*****************************************************************************
+*****************************************************************************
+Name: Ava Gullitti Section: DW1                      Due Date: June, 30, 2023
+*****************************************************************************
+*****************************************************************************
+Enter data for 4 customers
+For customer 1
+Enter an even positive account number less than 10000:1234
+
+Enter opening balance between $1 - $200,000:1200.50
+
+For customer 2
+Enter an even positive account number less than 10000:5678
+
+Enter opening balance between $1 - $200,000:1500.60
+
+For customer 3
+Enter an even positive account number less than 10000:9012
+
+Enter opening balance between $1 - $200,000:2000.9
+
+For customer 4
+Enter an even positive account number less than 10000:3456
+
+Enter opening balance between $1 - $200,000:2500.4
+
+
+MAIN MENU
+A -    Do deposit
+B -    View accounts
+C -    Exit the program
+Option - b
+
+ERROR! Enter option A, B, or C.
+
+MAIN MENU
+A -    Do deposit
+B -    View accounts
+C -    Exit the program
+Option - B
+
+================================= Balance Accounts ==========================
+=============================================================================
+Balance amount for Customer account number 1234       1260.53
+Balance amount for Customer account number 5678       1575.63
+Balance amount for Customer account number 9012       2100.95
+Balance amount for Customer account number 3456       2625.42
+=============================================================================
+
+MAIN MENU
+A -    Do deposit
+B -    View accounts
+C -    Exit the program
+Option - A
+
+Account Number:5678
+Enter the amount needed to deposit: 1000
+
+
+MAIN MENU
+A -    Do deposit
+B -    View accounts
+C -    Exit the program
+Option - B
+
+================================= Balance Accounts ==========================
+=============================================================================
+Balance amount for Customer account number 1234       1260.53
+Balance amount for Customer account number 5678       2575.63
+Balance amount for Customer account number 9012       2100.95
+Balance amount for Customer account number 3456       2625.42
+=============================================================================
+
+MAIN MENU
+A -    Do deposit
+B -    View accounts
+C -    Exit the program
+Option - A 
+
+Account Number:1234
+Enter the amount needed to deposit: 45.7
+
+
+MAIN MENU
+A -    Do deposit
+B -    View accounts
+C -    Exit the program
+Option - B
+
+================================= Balance Accounts ==========================
+=============================================================================
+Balance amount for Customer account number 1234       1306.23
+Balance amount for Customer account number 5678       2575.63
+Balance amount for Customer account number 9012       2100.95
+Balance amount for Customer account number 3456       2625.42
+=============================================================================
+
+MAIN MENU
+A -    Do deposit
+B -    View accounts
+C -    Exit the program
+Option - C
+
+================================= Balance Accounts ==========================
+=============================================================================
+Balance amount for Customer account number 1234       1306.23
+Balance amount for Customer account number 5678       2575.63
+Balance amount for Customer account number 9012       2100.95
+Balance amount for Customer account number 3456       2625.42
+=============================================================================
+
+Have a good day!
