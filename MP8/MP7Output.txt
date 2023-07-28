@@ -1,0 +1,100 @@
+
+*****Starting a new line*****
+The word being checked is COMPUTER
+
+User word is COMPUDER
+The user word has one character substituted
+
+User word is COPMUTER
+The user word contains a transposition
+
+User word is COMPTER
+The user word has one character deleted
+
+User word is COMPUTXER
+The user word has one character inserted
+
+User word is KOMPUTERS
+The user word is too bad to be a misspelling
+
+User word is COMPUTER
+The user word is correct
+
+
+*****Starting a new line*****
+The word being checked is BRITNEY
+
+User word is BRITTANY
+The user word is too bad to be a misspelling
+
+User word is BRITNE
+The user word has one character deleted
+
+User word is BRITNYE
+The user word contains a transposition
+
+User word is BTITINEY
+The user word is too bad to be a misspelling
+
+User word is BRITNEYS
+The user word has one character inserted
+
+
+*****Starting a new line*****
+The word being checked is KOURNIKOVA
+
+User word is KOURNIKOVO
+The user word has one character substituted
+
+User word is OURNIKOVA
+The user word has one character deleted
+
+User word is OKURNIKOVA
+The user word contains a transposition
+
+User word is SKOURNIKOVA
+The user word has one character inserted
+
+User word is COURNIKOVA
+The user word has one character substituted
+
+User word is KOURNAKOVA
+The user word has one character substituted
+
+
+*****Starting a new line*****
+The word being checked is NAME
+
+User word is SALE
+The user word is too bad to be a misspelling
+
+User word is SALES
+The user word is too bad to be a misspelling
+
+User word is NALE
+The user word has one character substituted
+
+User word is NAIL
+The user word is too bad to be a misspelling
+
+User word is NALES
+The user word is too bad to be a misspelling
+
+User word is NAMES
+The user word has one character inserted
+
+User word is NAMSE
+The user word has one character inserted
+
+User word is NAM
+The user word has one character deleted
+
+User word is NMAE
+The user word contains a transposition
+
+There were 1 correct words
+There were 5 words with a substitution
+There were 4 words with a transposition
+There were 4 words with a deletion
+There were 5 words with a insertion
+There were 7 words that were way off
