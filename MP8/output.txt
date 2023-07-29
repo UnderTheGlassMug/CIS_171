@@ -1,0 +1,83 @@
+TEAM #1
+Team's name: ARGENTINE
+Team's points: 35
+
+Players of TEAM #1 : Lionel Messi, Paulo Dybala, Julian Alvarez, Emiliano Martinez, Lisandro Martinez, Rodrigo DePaul, Angel DiMaria, Lautaro Martinez, Alexis Mac, Enzo Fernandez, Christian Romero
+Player Name             Player Number           Player Points           
+***********             ***********             ***********             
+1. Lionel Messi         1                       16                      
+2. Paulo Dybala         2                       2                       
+3. Julian Alvarez       3                       0                       
+4. Emiliano Martinez    4                       1                       
+5. Lisandro Martinez    5                       3                       
+6. Rodrigo DePaul       6                       4                       
+7. Angel DiMaria        7                       5                       
+8. Lautaro Martinez     8                       3                       
+9. Alexis Mac           9                       0                       
+10. Enzo Fernandez      10                      0                       
+11. Christian Romero    11                      1                       
+
+TEAM #2
+Team's name: BRAZIL
+Team's points: 41
+
+Players of TEAM #2 : Alex Telles, Bremer Juan, Dani Alves, Danilo Mati, Eder Militao, Marquinhos James, Thiago Silva, Antony Silva, Gabriel Jesus, Gabriel Martinelli, Neymar Martinez
+Player Name             Player Number           Player Points           
+***********             ***********             ***********             
+1. Alex Telles          1                       2                       
+2. Bremer Juan          2                       3                       
+3. Dani Alves           3                       6                       
+4. Danilo Mati          4                       5                       
+5. Eder Militao         5                       1                       
+6. Marquinhos James     6                       0                       
+7. Thiago Silva         7                       0                       
+8. Antony Silva         8                       2                       
+9. Gabriel Jesus        9                       4                       
+10. Gabriel Martinelli  10                      8                       
+11. Neymar Martinez     11                      10                      
+
+TEAM #3
+Team's name: FRANCE
+Team's points: 45
+
+Players of TEAM #3 : Benjamin Lecomte, Alban Lafont, Alphonse reola, Steve Mandanda, Benoit Costil, Mike Maignan, William Saliba, Axel Disasi, Ibrahima Konate, Raphael Varane, Adil Rami
+Player Name             Player Number           Player Points           
+***********             ***********             ***********             
+1. Benjamin Lecomte     1                       5                       
+2. Alban Lafont         2                       4                       
+3. Alphonse reola       3                       2                       
+4. Steve Mandanda       4                       0                       
+5. Benoit Costil        5                       1                       
+6. Mike Maignan         6                       8                       
+7. William Saliba       7                       9                       
+8. Axel Disasi          8                       3                       
+9. Ibrahima Konate      9                       2                       
+10. Raphael Varane      10                      7                       
+11. Adil Rami           11                      4                       
+
+TEAM #4
+Team's name: POTUGAL
+Team's points: 55
+
+Players of TEAM #4 : Diogo Dalot, Joao Cancelo, Nuno Mendes, Raphael Guerreiro, Ruben Dias, Andre Silva, Cristiano Ronaldo, Goncalo Ramos, Joao Felix, Rafael Leao, Ricardo Horta
+Player Name             Player Number           Player Points           
+***********             ***********             ***********             
+1. Diogo Dalot          1                       4                       
+2. Joao Cancelo         2                       8                       
+3. Nuno Mendes          3                       3                       
+4. Raphael Guerreiro    4                       2                       
+5. Ruben Dias           5                       1                       
+6. Andre Silva          6                       5                       
+7. Cristiano Ronaldo    7                       14                      
+8. Goncalo Ramos        8                       8                       
+9. Joao Felix           9                       7                       
+10. Rafael Leao         10                      2                       
+11. Ricardo Horta       11                      1                       
+
+The player with the most points on Team #1 is Lionel Messi
+The player with the most points on Team #2 is Neymar Martinez
+The player with the most points on Team #3 is William Saliba
+The player with the most points on Team #4 is Cristiano Ronaldo
+
+The top two teams with the most points are:
+Team #4 with points 55 and Team #3 with points 45

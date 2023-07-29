@@ -1,7 +1,7 @@
 //Soccer Game
 //Ava Gullitti
 //7-28-2023
-/* This C++ program is designed to solve WCC machine problem 7. Machine problem 7 requires the program to correctly identify spelling mistakes. It will do this by first reading an input file of the name "mp7spelling.txt". From this file it extracts the correct spelling of the word and the users attempts at spelling this word correctly. Then the program will  create 5 different functions. The first function will check if the spelling is correct. The second will check if a character has been inserted into the word. The third one will see if the user accidentally switched two characters around. The fourth one will check if a character was deleted and the last one will check if a letter has been inserted. Once all of the words have been classified a switch statement will decide what to output to the text file. It also keeps track of how many times each error has occurred. Once the program reaches the end of the text file it will print the final counts and close the input and output files. */
+/* This C++ program is designed to solve WCC machine problem 8. This problem requires the program to read an input file containing soccer data. From this data 4 team class ojects are created containg 11 player class objects. After the player information has been inputed to the team class, the calss will display the team's information allong with the player on the team that scored the most points. The program will also display the 2 teams that scored the most points.*/
 
 // inculding necessary libraries
 #include <iostream>
@@ -13,34 +13,24 @@
 #include "team.h"
 using namespace std;
 
-//Creating variables to count the different types of typo
-int cor, sub, tran, del, ins, err;
+//creating global variables
+string line;
+string word;
 
-// Create a text string, which is used to output the text file
-string myText;
-
-// Read from the text file
+// Reading from the text file
 ifstream MyReadFile("teams.txt");
 //opening my output file
 ofstream fout("output.txt");
 
 //Running the main function
 int main() {
+	//ARGENTINE	
+	getline(MyReadFile, line);// Getting first line of words from the text file
+	stringstream ss(line);//making a string stream from the line
+	ss >> word; //extracting team name from file
+	TeamClass argentine(word);//creating a team object with that team name
 	
-	//reading the last lines of the text file to get the words to search for
-	int count = 1;
-	
-	string line;
-	string word;
-		
-	// Getting a line of words from the text file
-	getline(MyReadFile, line);
-		
-	//making a string stream from the line
-	stringstream ss(line);
-	ss >> word;
-	TeamClass argentine(word);
-		
+	//then for the next eleven lines
 	for (int playerIndex = 0; playerIndex < 11; playerIndex++) {
 		//making input varaiables
 		int playerNumber;
@@ -48,25 +38,21 @@ int main() {
 		string lastName;
 		int pointsScored;
 		
-		// Getting a line of words from the text file
-		getline(MyReadFile, line);	
-		//making a string stream from the line
-		stringstream ss(line);
+		getline(MyReadFile, line);// Getting specific line from the text file	
+		stringstream ss(line);//making a string stream from the line
 		ss >> playerNumber >> firstName >> lastName >> pointsScored;
-		argentine.setPlayer(firstName, lastName, playerNumber, pointsScored, playerIndex);
+		argentine.setPlayer(firstName, lastName, playerNumber, pointsScored, playerIndex);//extracing data from string stream
 	}
-	argentine.showTeam(1);
+	argentine.showTeam(1, fout);//displaying team information
 	
 	
 	//BRAZIL
-	getline(MyReadFile, line);
-		
-	//making a string stream from the line
-	stringstream ss2(line);
-	ss2 >> word;
+	getline(MyReadFile, line);//reading from the line of the text file
+	stringstream ss2(line);//making a string stream from the line
+	ss2 >> word;//extracing word from stream
+	TeamClass brazil(word);//creating a team object with the name BRAZIL
 	
-	TeamClass brazil(word);
-		
+	//then for next eleven lines
 	for (int playerIndex = 0; playerIndex < 11; playerIndex++) {
 		//making input varaiables
 		int playerNumber;
@@ -74,24 +60,20 @@ int main() {
 		string lastName;
 		int pointsScored;
 		
-		// Getting a line of words from the text file
-		getline(MyReadFile, line);	
-		//making a string stream from the line
-		stringstream ss(line);
+		getline(MyReadFile, line);// Getting a line of words from the text file	
+		stringstream ss(line);//making a string stream from the line
 		ss >> playerNumber >> firstName >> lastName >> pointsScored;
-		brazil.setPlayer(firstName, lastName, playerNumber, pointsScored, playerIndex);
+		brazil.setPlayer(firstName, lastName, playerNumber, pointsScored, playerIndex);//inputting player information into the team object
 	}
-	brazil.showTeam(2);
+	brazil.showTeam(2, fout);//displaying team information
 	
 	//FRANCE
-	getline(MyReadFile, line);
-		
-	//making a string stream from the line
-	stringstream ss3(line);
-	ss3 >> word;
+	getline(MyReadFile, line);// reading a line from the file
+	stringstream ss3(line);//making a string stream from the line
+	ss3 >> word;//extracting name from stream
+	TeamClass france(word);// creating a team object with the name that was extracted
 	
-	TeamClass france(word);
-		
+	//then for next 11 lines
 	for (int playerIndex = 0; playerIndex < 11; playerIndex++) {
 		//making input varaiables
 		int playerNumber;
@@ -99,24 +81,20 @@ int main() {
 		string lastName;
 		int pointsScored;
 		
-		// Getting a line of words from the text file
-		getline(MyReadFile, line);	
-		//making a string stream from the line
-		stringstream ss(line);
+		getline(MyReadFile, line);// Getting a line of words from the text file	
+		stringstream ss(line);//making a string stream from the line
 		ss >> playerNumber >> firstName >> lastName >> pointsScored;
-		france.setPlayer(firstName, lastName, playerNumber, pointsScored, playerIndex);
+		france.setPlayer(firstName, lastName, playerNumber, pointsScored, playerIndex);//input player information to team class
 	}
-	france.showTeam(3);
+	france.showTeam(3, fout);// displaying team information
 	
 	//POTUGAL
-	getline(MyReadFile, line);
-		
-	//making a string stream from the line
-	stringstream ss4(line);
-	ss4 >> word;
+	getline(MyReadFile, line);//reading a line from the file
+	stringstream ss4(line);//making a string stream from the line
+	ss4 >> word;//extracting a word from the file
+	TeamClass potugal(word);//making a team object with that name
 	
-	TeamClass potugal(word);
-		
+	//then for next 11 lines
 	for (int playerIndex = 0; playerIndex < 11; playerIndex++) {
 		//making input varaiables
 		int playerNumber;
@@ -124,23 +102,43 @@ int main() {
 		string lastName;
 		int pointsScored;
 		
-		// Getting a line of words from the text file
-		getline(MyReadFile, line);	
-		//making a string stream from the line
-		stringstream ss(line);
+		getline(MyReadFile, line);// Getting a line of words from the text file
+		stringstream ss(line);//making a string stream from the line
 		ss >> playerNumber >> firstName >> lastName >> pointsScored;
-		potugal.setPlayer(firstName, lastName, playerNumber, pointsScored, playerIndex);
+		potugal.setPlayer(firstName, lastName, playerNumber, pointsScored, playerIndex);//inputting player information in to the team object
 	}
-	potugal.showTeam(4);
+	potugal.showTeam(4, fout);//displaying the team information
 	
-	argentine.showMostPointsPlayer(1);
-	brazil.showMostPointsPlayer(2);
-	france.showMostPointsPlayer(3);
-	potugal.showMostPointsPlayer(4);
+	//displaying the player the has the post points for each team
+	argentine.showMostPointsPlayer(1, fout);
+	brazil.showMostPointsPlayer(2, fout);
+	france.showMostPointsPlayer(3, fout);
+	potugal.showMostPointsPlayer(4, fout);
 	
-	TeamClass teamlist[4] = {argentine, brazil, france, potugal};
+	//creating a list of all the teams
+	TeamClass teamList[4] = {argentine, brazil, france, potugal};
+	
+	//figuring out the first and secound place teams
+	int mostPoints = 0;
+	int mostPointsNumber = 0;
+	int secoundMostPoints = 0;
+	int secoundMostPointsNumber = 0;
+	//for each team
+	for (int counter = 0; counter < 4; counter++) {
+		if (teamList[counter].gettotalPoints() > mostPoints) {//if the team has the most points
+			//save the old team with the most points
+			secoundMostPoints = mostPoints;
+			secoundMostPointsNumber = mostPointsNumber;
+			//replace old team with new team
+			mostPoints = teamList[counter].gettotalPoints();
+			mostPointsNumber = counter + 1;
+		}
+	}
+	//displaying the top two teams to the text files
+	fout << endl << "The top two teams with the most points are:" << endl;
+	fout << "Team #" << mostPointsNumber << " with points " << mostPoints << " and Team #" << secoundMostPointsNumber << " with points " << secoundMostPoints << endl;
+	
 	// Close the file input and output files
-	
 	MyReadFile.close();
 	fout.close();
 	return 0;

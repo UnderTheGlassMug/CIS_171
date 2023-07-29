@@ -3,24 +3,19 @@
 #include <iostream>
 using namespace std;
 
-// Team constructor
+// player constructor
 PlayerClass::PlayerClass(string u_fname, string u_lname, int u_number, int u_pointsScored)
 {
     setPlayer(u_fname, u_lname, u_number, u_pointsScored);
 }
 
-// Team member function
+// player member function
 void PlayerClass::setPlayer(string u_fname, string u_lname, int u_number, int u_pointsScored)
 {
     fname = u_fname;
     lname = u_lname;
     number = u_number;
     pointsScored = u_pointsScored;
-}
-
-void PlayerClass::showStats()
-{
-    cout << fname;
 }
 
 //getter functions
